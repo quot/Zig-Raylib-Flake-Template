@@ -24,3 +24,7 @@ This flake sets up a development environment with those missing dependencies so 
 
 Currently, the flake is only setup to use `nix develop`. You can use `nix develop --command bash -c "zig build run; exit;"` if you want to do a one-time run without staying in the develp environment.
 
+## Tested With
+
+- Zig 0.13.0
+- Raylib 5.5-dev through raylib-zig
