@@ -12,8 +12,11 @@ Using Raylib-Zig: https://github.com/Not-Nik/raylib-zig
 
 Building raylib-zig in NixOS throws errors caused by missing libraries.
 
-`error: unable to find dynamic system library 'GL' using strategy 'paths_first'.`
-`error: unable to find dynamic system library 'X11' using strategy 'paths_first'.`
+```
+error: unable to find dynamic system library 'GL' using strategy 'paths_first'.
+...
+error: unable to find dynamic system library 'X11' using strategy 'paths_first'.
+```
 
 This flake sets up a development environment with those missing dependencies so you don't have to install them on your base OS.
 
