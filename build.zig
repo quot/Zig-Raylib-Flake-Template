@@ -13,6 +13,12 @@ pub fn build(b: *std.Build) void {
 
     b.installArtifact(exe);
 
+    // ########################################################################
+    // ########################################################################
+    // RAYLIB LIBRARY SETUP
+    // Use "raylib-zig" dependency from `build.zig.zon` to create library that
+    // will be used in `main.zig`.
+
     const raylib_dep = b.dependency("raylib-zig", .{
         .target = target,
         .optimize = optimize,
@@ -25,6 +31,9 @@ pub fn build(b: *std.Build) void {
     exe.linkLibrary(raylib_artifact);
     exe.root_module.addImport("raylib", raylib);
     exe.root_module.addImport("raygui", raygui);
+
+    // ########################################################################
+    // ########################################################################
 
     // run step
     const run_exe = b.addRunArtifact(exe);

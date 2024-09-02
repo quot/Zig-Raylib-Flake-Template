@@ -1,4 +1,7 @@
 {
+  # Based on nix-communty zig template
+  # https://github.com/nix-community/templates/tree/main/zig
+
   description = "Zig Template";
 
   inputs = {
@@ -19,7 +22,22 @@
           zls
         ];
 
-        buildInputs = with pkgs; [ libGL xorg.libX11 xorg.libXcursor xorg.libXrandr xorg.libXinerama xorg.libXi ];
+        #######################################################################
+        #######################################################################
+        # ZIG BUILD DEPENDENCIES
+        # Dependencies required by Not-Nik/raylib-zig to build Raylib.
+        
+        buildInputs = with pkgs; [
+          libGL
+          xorg.libX11
+          xorg.libXcursor
+          xorg.libXrandr
+          xorg.libXinerama
+          xorg.libXi
+        ];
+
+        #######################################################################
+        #######################################################################
       in {
         devShells.default = pkgs.mkShell {inherit nativeBuildInputs buildInputs;};
 
