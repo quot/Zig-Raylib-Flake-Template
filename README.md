@@ -1,6 +1,6 @@
 # Zig/Raylib Nix Flake Template
 
-A starting point for developing Zig with Raylib with Nix or in NixOS.
+A starting point for developing Zig with Raylib using Nix or in NixOS.
 
 ---
 
@@ -10,7 +10,7 @@ Using Raylib-Zig: https://github.com/Not-Nik/raylib-zig
 
 ---
 
-Building raylib-zig in NixOS throws errors caused by missing libraries.
+Building raylib-zig in NixOS throws errors caused by missing system libraries.
 
 ```
 error: unable to find dynamic system library 'GL' using strategy 'paths_first'.
